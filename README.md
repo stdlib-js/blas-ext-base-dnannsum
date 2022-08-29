@@ -37,7 +37,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dnannsum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnannsum@esm/index.mjs';
+import dnannsum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnannsum@v0.0.9-esm/index.mjs';
 ```
 
 #### dnannsum( N, x, strideX, out, strideOut )
@@ -158,7 +158,7 @@ var v = dnannsum.ndarray( N, x, 2, 1, out, 2, 1 );
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import dnannsum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnannsum@esm/index.mjs';
+import dnannsum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnannsum@v0.0.9-esm/index.mjs';
 
 var x;
 var i;
