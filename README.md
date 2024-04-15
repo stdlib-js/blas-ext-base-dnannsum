@@ -41,14 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-ext-base-dnannsum
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import dnannsum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnannsum@esm/index.mjs';
+var dnannsum = require( '@stdlib/blas-ext-base-dnannsum' );
 ```
 
 #### dnannsum( N, x, strideX, out, strideOut )
@@ -56,7 +74,7 @@ import dnannsum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnanns
 Computes the sum of double-precision floating-point strided array elements, ignoring `NaN` values.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, -2.0, NaN, 2.0 ] );
 var out = new Float64Array( 2 );
@@ -73,17 +91,15 @@ The function has the following parameters:
 -   **out**: output [`Float64Array`][@stdlib/array/float64] whose first element is the sum and whose second element is the number of non-NaN elements.
 -   **strideOut**: index increment for `out`.
 
-The `N` and `stride` parameters determine which elements are accessed at runtime. For example, to compute the sum of every other element in `x`,
+The `N` and `stride` parameters determine which elements in the strided array are accessed at runtime. For example, to compute the sum of every other element in the strided array,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, 2.0, NaN, -7.0, NaN, 3.0, 4.0, 2.0 ] );
 var out = new Float64Array( 2 );
-var N = floor( x.length / 2 );
 
-var v = dnannsum( N, x, 2, out, 1 );
+var v = dnannsum( 4, x, 2, out, 1 );
 // returns <Float64Array>[ 5.0, 2 ]
 ```
 
@@ -92,8 +108,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x0 = new Float64Array( [ 2.0, 1.0, NaN, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
@@ -101,9 +116,7 @@ var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd 
 var out0 = new Float64Array( 4 );
 var out1 = new Float64Array( out0.buffer, out0.BYTES_PER_ELEMENT*2 ); // start at 3rd element
 
-var N = floor( x0.length / 2 );
-
-var v = dnannsum( N, x1, 2, out1, 1 );
+var v = dnannsum( 4, x1, 2, out1, 1 );
 // returns <Float64Array>[ 5.0, 4 ]
 ```
 
@@ -112,7 +125,7 @@ var v = dnannsum( N, x1, 2, out1, 1 );
 Computes the sum of double-precision floating-point strided array elements, ignoring `NaN` values and using alternative indexing semantics.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, -2.0, NaN, 2.0 ] );
 var out = new Float64Array( 2 );
@@ -126,17 +139,15 @@ The function has the following additional parameters:
 -   **offsetX**: starting index for `x`.
 -   **offsetOut**: starting index for `out`.
 
-While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offset` parameter supports indexing semantics based on a starting index. For example, to calculate the sum of every other value in `x` starting from the second value
+While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offset` parameter supports indexing semantics based on a starting index. For example, to calculate the sum of every other value in the strided array starting from the second value
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 2.0, 1.0, NaN, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var out = new Float64Array( 4 );
-var N = floor( x.length / 2 );
 
-var v = dnannsum.ndarray( N, x, 2, 1, out, 2, 1 );
+var v = dnannsum.ndarray( 4, x, 2, 1, out, 2, 1 );
 // returns <Float64Array>[ 0.0, 5.0, 0.0, 4 ]
 ```
 
@@ -160,37 +171,26 @@ var v = dnannsum.ndarray( N, x, 2, 1, out, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
+```javascript
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var Float64Array = require( '@stdlib/array-float64' );
+var dnannsum = require( '@stdlib/blas-ext-base-dnannsum' );
 
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import dnannsum from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-dnannsum@esm/index.mjs';
-
-var x;
-var i;
-
-x = new Float64Array( 10 );
-for ( i = 0; i < x.length; i++ ) {
-    if ( randu() < 0.2 ) {
-        x[ i ] = NaN;
-    } else {
-        x[ i ] = round( randu()*100.0 );
+function clbk() {
+    if ( bernoulli( 0.7 ) > 0 ) {
+        return discreteUniform( 0, 100 );
     }
+    return NaN;
 }
+
+var x = filledarrayBy( 10, 'float64', clbk );
 console.log( x );
 
 var out = new Float64Array( 2 );
 dnannsum( x.length, x, 1, out, 1 );
 console.log( out );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -227,7 +227,7 @@ console.log( out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -290,15 +290,15 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/blas-ext-base-dnannsum/main/LICENSE
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/esm
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 <!-- <related-links> -->
 
-[@stdlib/blas/ext/base/dnansum]: https://github.com/stdlib-js/blas-ext-base-dnansum/tree/esm
+[@stdlib/blas/ext/base/dnansum]: https://github.com/stdlib-js/blas-ext-base-dnansum
 
-[@stdlib/blas/ext/base/dsum]: https://github.com/stdlib-js/blas-ext-base-dsum/tree/esm
+[@stdlib/blas/ext/base/dsum]: https://github.com/stdlib-js/blas-ext-base-dsum
 
 <!-- </related-links> -->
 
