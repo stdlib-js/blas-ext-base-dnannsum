@@ -2,6 +2,50 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2024-11-21)
+
+<section class="features">
+
+### Features
+
+-   [`045a348`](https://github.com/stdlib-js/stdlib/commit/045a348d16c6bf78a9ebfb31c1c74de5536e37ea) - add C `ndarray` API and refactor `blas/ext/base/dnannsum` [(#3197)](https://github.com/stdlib-js/stdlib/pull/3197)
+
+</section>
+
+<!-- /.features -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`045a348`](https://github.com/stdlib-js/stdlib/commit/045a348d16c6bf78a9ebfb31c1c74de5536e37ea) - **feat:** add C `ndarray` API and refactor `blas/ext/base/dnannsum` [(#3197)](https://github.com/stdlib-js/stdlib/pull/3197) _(by Muhammad Haris, stdlib-bot)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Muhammad Haris
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-28)
