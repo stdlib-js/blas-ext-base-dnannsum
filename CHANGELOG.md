@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-02-15)
+## Unreleased (2025-06-20)
 
 <section class="features">
 
@@ -22,6 +22,8 @@
 
 <details>
 
+-   [`5d83a20`](https://github.com/stdlib-js/stdlib/commit/5d83a20bab1fd787ba28f19cb13c20d395398b43) - **style:** remove double empty lines in C files _(by Philipp Burckhardt)_
+-   [`23a0064`](https://github.com/stdlib-js/stdlib/commit/23a0064407117899f351404fc9e136c98d8340d2) - **test:** add signed zero tests _(by Athan Reines)_
 -   [`e62caf3`](https://github.com/stdlib-js/stdlib/commit/e62caf3e3c27d418a7f364c5c0dd7590e4a081bd) - **docs:** update `blas/ext/base/dnannsum`  to follow current project conventions [(#5186)](https://github.com/stdlib-js/stdlib/pull/5186) _(by Muhammad Haris)_
 -   [`62364f6`](https://github.com/stdlib-js/stdlib/commit/62364f62ea823a3b52c2ad25660ecd80c71f8f36) - **style:** fix C comment alignment _(by Philipp Burckhardt)_
 -   [`045a348`](https://github.com/stdlib-js/stdlib/commit/045a348d16c6bf78a9ebfb31c1c74de5536e37ea) - **feat:** add C `ndarray` API and refactor `blas/ext/base/dnannsum` [(#3197)](https://github.com/stdlib-js/stdlib/pull/3197) _(by Muhammad Haris, stdlib-bot)_
@@ -36,8 +38,9 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Muhammad Haris
 -   Philipp Burckhardt
 
