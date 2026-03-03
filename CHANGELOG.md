@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-03-01)
+## Unreleased (2026-03-03)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`789c1de`](https://github.com/stdlib-js/stdlib/commit/789c1de4fa2989d586937171c1c0051a5aded600) - **bench:** refactor to use dynamic memory allocation in `blas/ext/base/dnannsum` [(#10648)](https://github.com/stdlib-js/stdlib/pull/10648) _(by Prajjwal Bajpai)_
 -   [`85d50a9`](https://github.com/stdlib-js/stdlib/commit/85d50a9a5e8d44eaf8008c64e5db9fbd809cb14b) - **bench:** refactor to use string interpolation in blas/ext/base/dnannsum [(#10535)](https://github.com/stdlib-js/stdlib/pull/10535) _(by Kamal Singh Rautela)_
 
 </details>
@@ -24,9 +25,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Kamal Singh Rautela
+-   Prajjwal Bajpai
 
 </section>
 
