@@ -1,4 +1,4 @@
-"use strict";var u=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var s=u(function(A,v){
+"use strict";var u=function(e,r){return function(){try{return r||e((r={exports:{}}).exports,r),r.exports}catch(n){throw (r=0, n)}};};var s=u(function(A,v){
 var j=require('@stdlib/blas-ext-base-dnannsumkbn/dist').ndarray;function l(e,r,n,i,a,p,x){return j(e,r,n,i,a,p,x)}v.exports=l
 });var o=u(function(B,d){
 var q=require('@stdlib/strided-base-stride2offset/dist'),R=s();function _(e,r,n,i,a){return R(e,r,n,q(e,n),i,a,q(2,a))}d.exports=_
