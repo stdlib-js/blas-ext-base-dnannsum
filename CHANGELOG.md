@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-24)
+## Unreleased (2026-11-03)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`789c1de`](https://github.com/stdlib-js/stdlib/commit/789c1de4fa2989d586937171c1c0051a5aded600) - **bench:** refactor to use dynamic memory allocation in `blas/ext/base/dnannsum` [(#10648)](https://github.com/stdlib-js/stdlib/pull/10648) _(by Prajjwal Bajpai)_
 -   [`85d50a9`](https://github.com/stdlib-js/stdlib/commit/85d50a9a5e8d44eaf8008c64e5db9fbd809cb14b) - **bench:** refactor to use string interpolation in blas/ext/base/dnannsum [(#10535)](https://github.com/stdlib-js/stdlib/pull/10535) _(by Kamal Singh Rautela)_
 
@@ -25,9 +26,10 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Kamal Singh Rautela
+-   Philipp Burckhardt
 -   Prajjwal Bajpai
 
 </section>
